@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cpf-page .glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+.cpf-page .section-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+.cpf-page .section-title {
+  padding: 20px 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+}
+.cpf-page .data-label {
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #8899bb;
+  margin-bottom: 4px;
+}
+.cpf-page .data-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.cpf-page .table-header {
+  padding: 12px 24px;
+  text-align: left;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #8899bb;
+  background: rgba(255, 255, 255, 0.06);
+}
+.cpf-page .table-cell {
+  padding: 16px 24px;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+  .cpf-page main { padding: 16px; }
+  .cpf-page .glass { padding: 24px !important; }
+}
