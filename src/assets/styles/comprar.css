@@ -70,18 +70,57 @@ body.auth-active #root {
   align-items: center;
   gap: 10px;
   margin-top: 15px;
-  padding: 10px 14px;
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(59, 130, 246, 0.35);
-  border-radius: 12px;
   color: var(--text-muted);
   font-size: 0.875rem;
 }
 
-.remember-wrap input {
+.remember-wrap label {
+  cursor: pointer;
+  user-select: none;
+}
+
+.remember-wrap input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
   width: 18px;
   height: 18px;
-  accent-color: var(--primary);
+  min-width: 18px;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.remember-wrap input[type="checkbox"]:hover {
+  border-color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.remember-wrap input[type="checkbox"]:checked {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: var(--primary);
+}
+
+.remember-wrap input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--primary);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.remember-wrap input[type="checkbox"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-glow);
+  border-color: var(--primary);
 }
 
 .modal-pix {
